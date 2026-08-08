@@ -137,5 +137,8 @@
   <ItemGroup>
     <None Include="Resources\Darkeyed on Twitter.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Aug 8, 2026, 04_47_43 PM.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
