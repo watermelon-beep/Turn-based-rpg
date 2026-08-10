@@ -42,13 +42,13 @@ Partial Class Form1
         '
         'BtnPlay
         '
-        Me.BtnPlay.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnPlay.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnPlay.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnPlay.FlatAppearance.BorderSize = 0
         Me.BtnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPlay.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPlay.ForeColor = System.Drawing.Color.Ivory
-        Me.BtnPlay.Location = New System.Drawing.Point(865, 619)
+        Me.BtnPlay.Location = New System.Drawing.Point(840, 618)
         Me.BtnPlay.Name = "BtnPlay"
         Me.BtnPlay.Size = New System.Drawing.Size(318, 76)
         Me.BtnPlay.TabIndex = 1
@@ -63,7 +63,7 @@ Partial Class Form1
         Me.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSetting.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSetting.ForeColor = System.Drawing.Color.Ivory
-        Me.btnSetting.Location = New System.Drawing.Point(943, 714)
+        Me.btnSetting.Location = New System.Drawing.Point(919, 716)
         Me.btnSetting.Name = "btnSetting"
         Me.btnSetting.Size = New System.Drawing.Size(165, 76)
         Me.btnSetting.TabIndex = 2
@@ -74,8 +74,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.Dark_Fantasy_Pixel_Art
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.map
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
         Me.Controls.Add(Me.btnSetting)
         Me.Controls.Add(Me.BtnPlay)

@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="battleField.Designer.vb">
+      <DependentUpon>battleField.vb</DependentUpon>
+    </Compile>
+    <Compile Include="battleField.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,6 +110,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="battleField.resx">
+      <DependentUpon>battleField.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +149,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChatGPT Image Aug 8, 2026, 04_47_43 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charImg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
