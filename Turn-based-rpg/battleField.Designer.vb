@@ -31,18 +31,21 @@ Partial Class battleField
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.heroAvatar = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.healthBar = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.manaBar = New System.Windows.Forms.Panel()
+        Me.expBar = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.heroAvatar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.healthBar.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -86,6 +89,8 @@ Partial Class battleField
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("MingLiU-ExtB", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Location = New System.Drawing.Point(181, 77)
         Me.Button4.Name = "Button4"
@@ -98,6 +103,8 @@ Partial Class battleField
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("MingLiU-ExtB", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(3, 77)
         Me.Button3.Name = "Button3"
@@ -110,6 +117,8 @@ Partial Class battleField
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("MingLiU-ExtB", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(181, 3)
         Me.Button2.Name = "Button2"
@@ -122,6 +131,8 @@ Partial Class battleField
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("MingLiU-ExtB", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(3, 3)
         Me.Button1.Name = "Button1"
@@ -148,22 +159,24 @@ Partial Class battleField
         Me.TextBox2.Size = New System.Drawing.Size(1050, 177)
         Me.TextBox2.TabIndex = 0
         '
-        'Panel3
+        'heroAvatar
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Controls.Add(Me.PictureBox1)
-        Me.Panel3.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel3.Location = New System.Drawing.Point(200, 102)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(353, 185)
-        Me.Panel3.TabIndex = 2
+        Me.heroAvatar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.heroAvatar.Controls.Add(Me.expBar)
+        Me.heroAvatar.Controls.Add(Me.manaBar)
+        Me.heroAvatar.Controls.Add(Me.healthBar)
+        Me.heroAvatar.Controls.Add(Me.Label1)
+        Me.heroAvatar.Controls.Add(Me.PictureBox1)
+        Me.heroAvatar.Location = New System.Drawing.Point(106, 106)
+        Me.heroAvatar.Name = "heroAvatar"
+        Me.heroAvatar.Size = New System.Drawing.Size(353, 185)
+        Me.heroAvatar.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(174, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(107, 20)
@@ -180,50 +193,60 @@ Partial Class battleField
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'TableLayoutPanel2
+        'PictureBox2
         '
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.ProgressBar2, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.ProgressBar1, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(159, 86)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(194, 75)
-        Me.TableLayoutPanel2.TabIndex = 0
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Turn_based_rpg.My.Resources.Resources.charImg1
+        Me.PictureBox2.Location = New System.Drawing.Point(558, 346)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(200, 307)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
         '
-        'ProgressBar2
+        'healthBar
         '
-        Me.ProgressBar2.BackColor = System.Drawing.Color.Blue
-        Me.ProgressBar2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ProgressBar2.ForeColor = System.Drawing.SystemColors.Control
-        Me.ProgressBar2.Location = New System.Drawing.Point(3, 40)
-        Me.ProgressBar2.Name = "ProgressBar2"
-        Me.ProgressBar2.Size = New System.Drawing.Size(188, 32)
-        Me.ProgressBar2.TabIndex = 1
-        Me.ProgressBar2.Value = 100
+        Me.healthBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.healthBar.Controls.Add(Me.Panel5)
+        Me.healthBar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.healthBar.Location = New System.Drawing.Point(178, 90)
+        Me.healthBar.Name = "healthBar"
+        Me.healthBar.Size = New System.Drawing.Size(160, 25)
+        Me.healthBar.TabIndex = 3
         '
-        'ProgressBar1
+        'Panel5
         '
-        Me.ProgressBar1.BackColor = System.Drawing.Color.Red
-        Me.ProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ProgressBar1.Location = New System.Drawing.Point(3, 3)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(188, 31)
-        Me.ProgressBar1.TabIndex = 0
-        Me.ProgressBar1.Value = 100
+        Me.Panel5.Location = New System.Drawing.Point(0, 31)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(160, 25)
+        Me.Panel5.TabIndex = 4
+        '
+        'manaBar
+        '
+        Me.manaBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.manaBar.Location = New System.Drawing.Point(178, 121)
+        Me.manaBar.Name = "manaBar"
+        Me.manaBar.Size = New System.Drawing.Size(160, 25)
+        Me.manaBar.TabIndex = 4
+        '
+        'expBar
+        '
+        Me.expBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.expBar.Location = New System.Drawing.Point(178, 152)
+        Me.expBar.Name = "expBar"
+        Me.expBar.Size = New System.Drawing.Size(160, 25)
+        Me.expBar.TabIndex = 4
         '
         'battleField
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.map
+        Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.battlefield
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.heroAvatar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "battleField"
@@ -233,10 +256,11 @@ Partial Class battleField
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.heroAvatar.ResumeLayout(False)
+        Me.heroAvatar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel2.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.healthBar.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -250,10 +274,12 @@ Partial Class battleField
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents heroAvatar As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents ProgressBar2 As ProgressBar
-    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents expBar As Panel
+    Friend WithEvents manaBar As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents healthBar As Panel
 End Class
