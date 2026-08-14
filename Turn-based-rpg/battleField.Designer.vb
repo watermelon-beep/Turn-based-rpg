@@ -32,20 +32,23 @@ Partial Class battleField
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.heroAvatar = New System.Windows.Forms.Panel()
+        Me.expBar = New System.Windows.Forms.Panel()
+        Me.manaBar = New System.Windows.Forms.Panel()
+        Me.healthBar = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.healthBar = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.manaBar = New System.Windows.Forms.Panel()
-        Me.expBar = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.heroAvatar.SuspendLayout()
+        Me.healthBar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.healthBar.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -172,6 +175,39 @@ Partial Class battleField
         Me.heroAvatar.Size = New System.Drawing.Size(353, 185)
         Me.heroAvatar.TabIndex = 2
         '
+        'expBar
+        '
+        Me.expBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.expBar.Location = New System.Drawing.Point(178, 152)
+        Me.expBar.Name = "expBar"
+        Me.expBar.Size = New System.Drawing.Size(160, 25)
+        Me.expBar.TabIndex = 4
+        '
+        'manaBar
+        '
+        Me.manaBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.manaBar.Location = New System.Drawing.Point(178, 121)
+        Me.manaBar.Name = "manaBar"
+        Me.manaBar.Size = New System.Drawing.Size(160, 25)
+        Me.manaBar.TabIndex = 4
+        '
+        'healthBar
+        '
+        Me.healthBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.healthBar.Controls.Add(Me.Panel5)
+        Me.healthBar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.healthBar.Location = New System.Drawing.Point(178, 90)
+        Me.healthBar.Name = "healthBar"
+        Me.healthBar.Size = New System.Drawing.Size(160, 25)
+        Me.healthBar.TabIndex = 3
+        '
+        'Panel5
+        '
+        Me.Panel5.Location = New System.Drawing.Point(0, 31)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(160, 25)
+        Me.Panel5.TabIndex = 4
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -196,46 +232,32 @@ Partial Class battleField
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.Turn_based_rpg.My.Resources.Resources.charImg1
-        Me.PictureBox2.Location = New System.Drawing.Point(558, 346)
+        Me.PictureBox2.Image = Global.Turn_based_rpg.My.Resources.Resources.charbattle1
+        Me.PictureBox2.Location = New System.Drawing.Point(552, 335)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(200, 307)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'healthBar
+        'PictureBox3
         '
-        Me.healthBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
-        Me.healthBar.Controls.Add(Me.Panel5)
-        Me.healthBar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer))
-        Me.healthBar.Location = New System.Drawing.Point(178, 90)
-        Me.healthBar.Name = "healthBar"
-        Me.healthBar.Size = New System.Drawing.Size(160, 25)
-        Me.healthBar.TabIndex = 3
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.Turn_based_rpg.My.Resources.Resources.enemy1_removebg_preview
+        Me.PictureBox3.Location = New System.Drawing.Point(1313, 335)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(200, 307)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
         '
-        'Panel5
+        'Panel3
         '
-        Me.Panel5.Location = New System.Drawing.Point(0, 31)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(160, 25)
-        Me.Panel5.TabIndex = 4
-        '
-        'manaBar
-        '
-        Me.manaBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.manaBar.Location = New System.Drawing.Point(178, 121)
-        Me.manaBar.Name = "manaBar"
-        Me.manaBar.Size = New System.Drawing.Size(160, 25)
-        Me.manaBar.TabIndex = 4
-        '
-        'expBar
-        '
-        Me.expBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.expBar.Location = New System.Drawing.Point(178, 152)
-        Me.expBar.Name = "expBar"
-        Me.expBar.Size = New System.Drawing.Size(160, 25)
-        Me.expBar.TabIndex = 4
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(1239, 281)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(359, 10)
+        Me.Panel3.TabIndex = 4
         '
         'battleField
         '
@@ -245,6 +267,8 @@ Partial Class battleField
         Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.battlefield
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.heroAvatar)
         Me.Controls.Add(Me.Panel2)
@@ -258,9 +282,10 @@ Partial Class battleField
         Me.Panel2.PerformLayout()
         Me.heroAvatar.ResumeLayout(False)
         Me.heroAvatar.PerformLayout()
+        Me.healthBar.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.healthBar.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,4 +307,6 @@ Partial Class battleField
     Friend WithEvents manaBar As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents healthBar As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Panel3 As Panel
 End Class
