@@ -73,6 +73,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property charbattle() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("charbattle", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property charbattle1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("charbattle1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property charImg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("charImg", resourceCulture)
@@ -116,6 +136,16 @@ Namespace My.Resources
         Friend ReadOnly Property Darkeyed_on_Twitter() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Darkeyed on Twitter", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property enemy1_removebg_preview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("enemy1-removebg-preview", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

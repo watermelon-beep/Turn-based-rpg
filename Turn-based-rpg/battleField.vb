@@ -19,4 +19,16 @@
         )
         End Using
     End Sub
+
+    Private Sub attackBtn_Click(sender As Object, e As EventArgs) Handles attackBtn.Click
+
+    End Sub
+
+    Private Sub attackBtn_MouseHover(sender As Object, e As EventArgs) Handles attackBtn.MouseHover
+        attackLbl.Text = "choose your attack..."
+    End Sub
+
+    Private Sub attackBtn_MouseLeave(sender As Object, e As EventArgs) Handles attackBtn.MouseLeave
+        attackLbl.Text = ""
+    End Sub
 End Class
