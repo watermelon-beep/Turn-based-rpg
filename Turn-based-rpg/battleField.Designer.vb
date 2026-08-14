@@ -23,6 +23,7 @@ Partial Class battleField
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.attacklbl = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -30,6 +31,7 @@ Partial Class battleField
         Me.Button2 = New System.Windows.Forms.Button()
         Me.attackBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.damageCountlbl = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.heroAvatar = New System.Windows.Forms.Panel()
         Me.expBar = New System.Windows.Forms.Panel()
@@ -39,8 +41,8 @@ Partial Class battleField
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.enemy1 = New System.Windows.Forms.PictureBox()
+        Me.enemyHealth = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -48,12 +50,13 @@ Partial Class battleField
         Me.healthBar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.enemy1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.attacklbl)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel1.Location = New System.Drawing.Point(197, 689)
@@ -61,13 +64,25 @@ Partial Class battleField
         Me.Panel1.Size = New System.Drawing.Size(356, 257)
         Me.Panel1.TabIndex = 0
         '
+        'attacklbl
+        '
+        Me.attacklbl.AutoSize = True
+        Me.attacklbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.attacklbl.Font = New System.Drawing.Font("Microsoft Yi Baiti", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.attacklbl.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.attacklbl.Location = New System.Drawing.Point(22, 182)
+        Me.attacklbl.Name = "attacklbl"
+        Me.attacklbl.Size = New System.Drawing.Size(0, 19)
+        Me.attacklbl.TabIndex = 2
+        '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(3, 152)
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox1.Location = New System.Drawing.Point(0, 152)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(350, 102)
+        Me.TextBox1.Size = New System.Drawing.Size(356, 105)
         Me.TextBox1.TabIndex = 1
         '
         'TableLayoutPanel1
@@ -146,11 +161,22 @@ Partial Class battleField
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.damageCountlbl)
         Me.Panel2.Controls.Add(Me.TextBox2)
         Me.Panel2.Location = New System.Drawing.Point(675, 769)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1050, 177)
         Me.Panel2.TabIndex = 1
+        '
+        'damageCountlbl
+        '
+        Me.damageCountlbl.AutoSize = True
+        Me.damageCountlbl.Font = New System.Drawing.Font("Microsoft Yi Baiti", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.damageCountlbl.Location = New System.Drawing.Point(38, 43)
+        Me.damageCountlbl.Name = "damageCountlbl"
+        Me.damageCountlbl.Size = New System.Drawing.Size(72, 24)
+        Me.damageCountlbl.TabIndex = 5
+        Me.damageCountlbl.Text = "Label2"
         '
         'TextBox2
         '
@@ -240,24 +266,24 @@ Partial Class battleField
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox3
+        'enemy1
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.Turn_based_rpg.My.Resources.Resources.enemy1_removebg_preview
-        Me.PictureBox3.Location = New System.Drawing.Point(1313, 335)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(200, 307)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
+        Me.enemy1.BackColor = System.Drawing.Color.Transparent
+        Me.enemy1.Image = Global.Turn_based_rpg.My.Resources.Resources.enemy1_removebg_preview
+        Me.enemy1.Location = New System.Drawing.Point(1313, 335)
+        Me.enemy1.Name = "enemy1"
+        Me.enemy1.Size = New System.Drawing.Size(200, 307)
+        Me.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.enemy1.TabIndex = 3
+        Me.enemy1.TabStop = False
         '
-        'Panel3
+        'enemyHealth
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(1239, 281)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(359, 10)
-        Me.Panel3.TabIndex = 4
+        Me.enemyHealth.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.enemyHealth.Location = New System.Drawing.Point(1239, 281)
+        Me.enemyHealth.Name = "enemyHealth"
+        Me.enemyHealth.Size = New System.Drawing.Size(400, 10)
+        Me.enemyHealth.TabIndex = 4
         '
         'battleField
         '
@@ -267,8 +293,8 @@ Partial Class battleField
         Me.BackgroundImage = Global.Turn_based_rpg.My.Resources.Resources.battlefield
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.enemyHealth)
+        Me.Controls.Add(Me.enemy1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.heroAvatar)
         Me.Controls.Add(Me.Panel2)
@@ -285,7 +311,7 @@ Partial Class battleField
         Me.healthBar.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.enemy1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -307,6 +333,8 @@ Partial Class battleField
     Friend WithEvents manaBar As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents healthBar As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents enemy1 As PictureBox
+    Friend WithEvents enemyHealth As Panel
+    Friend WithEvents attacklbl As Label
+    Friend WithEvents damageCountlbl As Label
 End Class
