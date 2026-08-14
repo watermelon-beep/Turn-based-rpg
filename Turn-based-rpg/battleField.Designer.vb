@@ -23,7 +23,6 @@ Partial Class battleField
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.attackLbl = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -55,24 +54,12 @@ Partial Class battleField
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.attackLbl)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel1.Location = New System.Drawing.Point(197, 689)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(356, 257)
         Me.Panel1.TabIndex = 0
-        '
-        'attackLbl
-        '
-        Me.attackLbl.AutoSize = True
-        Me.attackLbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.attackLbl.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attackLbl.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.attackLbl.Location = New System.Drawing.Point(22, 168)
-        Me.attackLbl.Name = "attackLbl"
-        Me.attackLbl.Size = New System.Drawing.Size(0, 25)
-        Me.attackLbl.TabIndex = 2
         '
         'TextBox1
         '
@@ -322,5 +309,4 @@ Partial Class battleField
     Friend WithEvents healthBar As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents attackLbl As Label
 End Class
